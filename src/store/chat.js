@@ -12,7 +12,7 @@ let state = initialState;
 
 const chatStore = {
     init: () => {
-    <b>state = {...state, newDataCount= 0},</b>
+    state = {...state, newDataCount: 0}
     subject.next(state)
     },
     subscribe: setState => subject.subscribe(setState),
@@ -25,8 +25,10 @@ const chatStore = {
         subject.next(state);
     },
     clearChat: () => {
-        state = initialState;
+        state = {...state, data: []};
         subject.next(state);
     },
     initialState
 };
+
+export default chatStore;
