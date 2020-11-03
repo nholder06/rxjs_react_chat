@@ -6,6 +6,7 @@ import './index.css';
 const App = () => (
   <Router>
     <>
+    <PersonSwitcher />
     <Switch>
       <Route path='/' component={FirstPerson} exact />
       <Route path='/first-person' component={FirstPerson} exact />

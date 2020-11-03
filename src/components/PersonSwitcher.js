@@ -7,7 +7,7 @@ const PersonSwitcher = () => {
     const location = window.location.href.split('/')[3];
 
     useEffect(() => {
-        chatStore.unsubscribe(setChatState);
+        chatStore.subscribe(setChatState);
         chatStore.init();
     }, [])
 
